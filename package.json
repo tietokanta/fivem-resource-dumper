@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+<<<<<<< HEAD
+    "chacha": "^2.1.0",
+    "chacha20": "^0.1.4"
+=======
+    "axios": "^1.12.2",
+    "chacha": "^2.1.0",
+    "chacha20": "^0.1.4",
+    "msgpack-lite": "^0.1.26",
+    "uuid": "^13.0.0"
+>>>>>>> ff105ef (final)
+  }
+}
