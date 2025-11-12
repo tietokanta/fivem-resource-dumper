@@ -113,7 +113,6 @@ class ResourceDecryptor {
         }
     }
 
-    // Alternative method for just decryption without dumping
     async decryptResource(resourceUri, targetFile, outputFile = null, customFileName = null) {
         try {
             const resourceUriResult = this.processResourceUri(resourceUri);
@@ -144,10 +143,10 @@ class ResourceDecryptor {
         }
     }
 
-    // Method to just dump an already decrypted RPF file
     async dumpDecryptedFile(decryptedFilePath, outputFolder) {
         return await this.dumpToFolder(outputFolder, decryptedFilePath);
     }
 }
+
 
 module.exports = ResourceDecryptor;
