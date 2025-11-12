@@ -359,31 +359,3 @@ class RagePackfile {
 }
 
 module.exports = RagePackfile;
-
-// Example usage:
-if (require.main === module) {
-    (async () => {
-        const rpf = new RagePackfile();
-        const archivePath = './target.rpf.decrypted';
-        const outputDirectory = './extracted_files';
-
-        if (await rpf.openArchive(archivePath)) {
-            console.log('Extracting files...');
-
-            const allFiles = rpf.getAllFiles('/');
-
-            for (const filePath of allFiles) {
-                const content = await rpf.readFile(filePath);
-                if (content) {
-                    const fullPath = path.join(outputDirectory, filePath);
-                    await fs.mkdir(path.dirname(fullPath), { recursive: true });
-                    await fs.writeFile(fullPath, content);
-                    console.log(`Extracted: ${filePath}`);
-                }
-            }
-
-            await rpf.close();
-            console.log('Done!');
-        }
-    })();
-}
