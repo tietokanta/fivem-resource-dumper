@@ -1,5 +1,6 @@
 {
-    "server_url": "https://ve6ymitl.filter.evo-shield.com",
+    "server_url": "http://server_ip:port",
     "save_streams": false,
     "save_only_streams": false
+
 }
